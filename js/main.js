@@ -15,7 +15,8 @@ requirejs.config({
         teacherList:'/js/teacher/list',
         teacherAdd:'/js/teacher/add',
         homeLogin:'/js/home/repass',
-        homerepass:'/js/home/login',
+        homeRepass:'/js/home/login',
+        homeSettings:'/js/home/settings',
         couresAdd:'/js/coures/add',
         couresAdd_step1:'/js/coures/add_step1',
         couresAdd_step2:'/js/coures/add_step2',
@@ -49,6 +50,46 @@ require(['jquery','bootstrap']);
             break;
         case '/html/user/profile.html':
             require(['userProfile']);
+            break;
+        case '/html/teacher/add.html':
+            require(['teacherAdd']);
+            break;
+        case '/html/teacher/list.html':
+            require(['teacherList']);
+            break;
+        case '/html/home/login.html':
+            require(['homeLogin']);
+            break;
+        case '/html/home/repass.html':
+            require(['homeRepass']);
+            break;
+        case '/html/home/settings.html':
+            require(['homeSettings']);
+            break;
+
+        case '/html/coures/add.html':
+            require(['couresAdd']);
+            break;
+        case '/html/coures/add_step1.html':
+            require(['couresAdd_step1']);
+            break;
+        case '/html/coures/add_step2.html':
+            require(['couresAdd_step2']);
+            break;
+        case '/html/coures/add_step3.html':
+            require(['couresAdd_step3']);
+            break;
+        case '/html/coures/category.html':
+            require(['couresCategory']);
+            break;
+        case '/html/coures/category_add.html':
+            require(['couresCategory_add']);
+            break;
+        case '/html/coures/list.html':
+            require(['couresList']);
+            break;
+        case '/html/coures/topic.html':
+            require(['couresTopic']);
             break;
     }
 
