@@ -10,6 +10,7 @@ requirejs.config({
         bootstrap:'/lib/bootstrap/js/bootstrap.min',
 
         //自己写的
+        common:'js/common/common',
         userList:'/js/user/list',
         userProfile:'/js/user/profile',
         teacherList:'/js/teacher/list',
@@ -36,7 +37,7 @@ requirejs.config({
     }
 })
 
-require(['jquery','bootstrap']);
+require(['jquery','bootstrap','common']);
 
 /*
  *这里获取页面的pathname，然后对应的加载js。
