@@ -1,6 +1,8 @@
 /**
  * Created by Administrator on 2017/2/25.
  */
-define(['jquery'], function($) {
-    console.log('settings');
+define(['jquery','common','nprogress'], function($,undefined,nprogress) {
+    console.log('33');
+
+    nprogress.done()
 });

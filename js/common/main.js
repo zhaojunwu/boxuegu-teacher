@@ -9,8 +9,11 @@ requirejs.config({
         jquery:'/lib/jquery/jquery.min',
         bootstrap:'/lib/bootstrap/js/bootstrap.min',
         jqueryCookie:'/lib/jquery-cookie/jquery.cookie',
+        nprogress:'/lib/nprogress/nprogress',
+        template:'/lib/artTemplate-3.0.1/template',
 
         //自己写的
+        index:'js/index',
         common:'js/common/common',
         userList:'/js/user/list',
         userProfile:'/js/user/profile',
@@ -37,6 +40,11 @@ requirejs.config({
 
     }
 })
+
+//以最快速度开始加载进度条
+require(['nprogress'],function(nprogress){
+    nprogress.start();
+});
 
 require(['jquery','bootstrap','common']);
 
@@ -113,6 +121,9 @@ require(['jquery','bootstrap','common']);
                 break;
             case '/html/coures/topic.html':
                 require(['couresTopic']);
+                break;
+            case '/':
+                require(['index']);
                 break;
         }
 

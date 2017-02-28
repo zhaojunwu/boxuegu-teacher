@@ -1,7 +1,15 @@
 /**
  * Created by Administrator on 2017/2/26.
  */
-define(['jquery'],function($){
+define(['jquery','jqueryCookie'],function($,undefined){
+
+    //监听ajax事件,请求ajax时的loading
+    $(document).ajaxStart(function(){
+        $('.overlay').show();
+    }).ajaxStop(function(){
+        $('.overlay').hide();
+    });
+
 
     //9这里是给课程管理添加下拉
     $('.navs a').on('click',function(){
@@ -17,6 +25,16 @@ define(['jquery'],function($){
         });
     });
 
+    /**
+     * 根据页面路径定位左侧导航
+     * 1、获取当前页面的pathname
+     * 2、然后获取所有的a，remove掉active class，
+     * 然后再使用pathname获取到应该被选中的a，给它添加active class即可。
+     * 3、最后获取该a标签所有的父ul标签，让他们展示出来，如果不展示，我是看不着的。
+     * */
+    var pathname = window.location.pathname;
+    $('.navs a').removeClass('active').filter('[href="' + pathname + '"]')
+        .addClass('active').parents('ul').show();
 
     // 获取本地cookie用户信息，同时做容错处理
     var userInfo = null;
