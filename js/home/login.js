@@ -14,7 +14,7 @@ define(['jquery','jqueryCookie','nprogress'], function($,undefind,nprogress) {
     }catch(e){
         userInfo = {}
     }
-    $('.login .avayar img').attr('src', userInfo.tc_avatar? userInfo.tc_avatar: '/img/default.png');
+    $('.login .avatar img').attr('src', userInfo.tc_avatar? userInfo.tc_avatar: '/img/default.png');
 
 
     /*

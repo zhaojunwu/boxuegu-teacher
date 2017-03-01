@@ -11,6 +11,8 @@ requirejs.config({
         jqueryCookie:'/lib/jquery-cookie/jquery.cookie',
         nprogress:'/lib/nprogress/nprogress',
         template:'/lib/artTemplate-3.0.1/template',
+        datepicker:'/lib/bootstrap-datepicker/js/bootstrap-datepicker.min',
+        datepickerLanguage:'/lib/bootstrap-datepicker/locales/bootstrap-datepicker.zh-CN.min',
 
         //自己写的
         index:'js/index',
@@ -29,7 +31,8 @@ requirejs.config({
         couresCategory:'/js/coures/category',
         couresCategory_add:'/js/coures/category_add',
         couresList:'/js/coures/list',
-        couresTopic:'/js/coures/topic'
+        couresTopic:'/js/coures/topic',
+        util:'/js/common/util'
 
     },
 
