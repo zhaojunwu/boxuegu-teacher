@@ -4,7 +4,7 @@
 define([],{
     getQueryString:function(key){
         // 去掉字符串首字母?号
-        var search = location.href.slice(1);
+        var search = location.search.slice(1);
 
         // 使用&符号得到每一个key=val
         var searchArr = search.split('&');

@@ -25,7 +25,7 @@ define(['jquery','common','nprogress','template'], function($,undefined,nprogres
 
 
     // 通过事件委托的方式给动态生成的a标签绑定点击事件，
-    // 然后获取讲师详细信息并展示。
+    // 然后获取讲师详细信息并展示。    查看讲师
     //事件委托机制，找到他的父元素，中间是委托给谁的意思，就是给那个a委托teacher-view
     $('#teacher-list-tbody').on('click','.teacher-view',function(){
         $.get('/v6/teacher/view', {

@@ -21,7 +21,7 @@ define(['jquery', 'common', 'nprogress','util','template','datepicker','datepick
         if(tcId){
             $.get('/v6/teacher/edit',{tc_id:tcId},function(data){
                 if(data.code==200){
-                    var html = template('teacher-add-tpl',data.result);
+                    var html = template('teacher-form-tpl',data.result);
                     $('.teacher-add').html(html);
                     $('#datepicter').datepicker({
                         language: 'zh-CN',

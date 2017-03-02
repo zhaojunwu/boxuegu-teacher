@@ -39,7 +39,7 @@
                                 <th>编号</th>
                                 <th>姓名</th>
                                 <th>昵称</th>
-                                <th>年龄</th>
+                                <th>出生日期</th>
                                 <th>性别</th>
                                 <th>手机号码</th>
                                 <th>操作</th>
@@ -66,8 +66,8 @@
          <td>{{ teacher.tc_cellphone }}</td>
          <td data-id='{{ teacher.tc_id }}' data-status='{{teacher.tc_status}}'>
              <a href="#teacherModal" data-toggle="modal" class="btn btn-info btn-xs teacher-view">查 看</a>
-             <a href="add.html" class="btn btn-info btn-xs">编 辑</a>
-             <button class="btn btn-warning btn-xs teacher-status">注 销</button>
+             <a href="/html/teacher/add.html?tc_id={{ teacher.tc_id }}" class="btn btn-info btn-xs">编 辑</a>
+             <a href="javascript:;" class="btn btn-warning btn-xs teacher-status">注 销</a>
          </td>
          </tr>
          {{ /each }}
